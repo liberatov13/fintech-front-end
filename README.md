@@ -35,7 +35,7 @@ cd fintech-front-end
 # Instale as dependencias
 npm clean-install
 
-# Execute o projeto com maven
+# Execute o projeto com npm
 npm start
 ```
 
