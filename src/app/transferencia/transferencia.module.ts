@@ -12,6 +12,9 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+
 
 
 import { ListaComponent } from './lista/lista.component';
@@ -34,9 +37,10 @@ import { TransferenciaService } from './transferencia.service';
 		InputMaskModule,
 		DialogModule,
 		TableModule,
-		InputNumberModule
+		InputNumberModule,
+		ConfirmDialogModule,
 	],
-	providers: [TransferenciaService],
+	providers: [TransferenciaService, ConfirmationService],
 	exports: [
 		FormularioComponent
 	]

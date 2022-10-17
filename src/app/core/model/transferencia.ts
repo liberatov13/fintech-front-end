@@ -8,11 +8,5 @@ export class Transferencia {
 	dataTransferencia?: Date
 	dataAgendada?: Date
 
-	constructor(contaOrigem: Conta, contaDestino: Conta, valor: number, dataTransferencia: Date, dataAgendada: Date) {
-		this.contaOrigem = contaOrigem
-		this.contaDestino = contaDestino
-		this.valor = valor
-		this.dataTransferencia = dataTransferencia
-		this.dataAgendada = dataAgendada
-	}
+	constructor() {}
 }
