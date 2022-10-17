@@ -16,7 +16,7 @@
 
 		<div class="inline-block vertical-align-top ml-4">
 			<p-calendar [ngModel]="this.transferencia.dataAgendada" [minDate]="dataMinimaAgendamento"
-				name="dataAgendada" placeholder="Data da transferencia" [inputId]="'dataAgendada'"
+				name="dataAgendada" placeholder="Data da transferencia" [inputId]="'dataAgendada'" dateFormat="dd/mm/yy"
 				[readonlyInput]="true" [showIcon]="true" [required]="true" #dataAgendada="ngModel">
 			</p-calendar>
 			<small *ngIf="dataAgendada.invalid && dataAgendada.touched" class="p-error block">
