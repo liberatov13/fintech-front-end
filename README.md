@@ -1,4 +1,4 @@
-# :dollar: Fintech Front :dollar:
+# :coin: Fintech Front :coin:
 
 ## Sobre o projeto :scroll:
 Aplicação front-end para um sistema que permite realizar transferências financeiras.
