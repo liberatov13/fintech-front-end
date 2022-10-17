@@ -1,27 +1,45 @@
-# Fintech
+# :dollar: Fintech Front :dollar:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+## Sobre o projeto :scroll:
+Aplicação front-end para um sistema que permite realizar transferências financeiras.
 
-## Development server
+Esse sistema deve ser utilizando em conjunto com o projeto [Fintech back-end](https://github.com/liberatov13/fintech-back-end)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias utilizadas :hammer_and_wrench:
+- Angular (v14.2)
+- Angular CLI (v14.2.6): Para criação do projeto, componentes, módulos e serviços
+- PrimeNG (14.1.2): Para estilização de componentes
+- PrimeIcons (v6.0.1): Para utilização de icones
+- PrimeFlex (v3.2.1): Para utilização de classes CSS
 
-## Code scaffolding
+## Executando projeto 🧑‍💻
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Máquina local :desktop_computer:
+#### Pré-requisitos
+- NodeJS (v16.18.0)
+- NPM (v8.19.2)
+- API Spring
 
-## Build
+Baixe e execute [projeto de back-end](https://github.com/liberatov13/fintech-back-end) do GitHub.
+As instruções para executar a API estão disponíveis no README do projeto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Instalação do front-end
 
-## Running unit tests
+```bash
+# Clone o projeto front-end
+git clone https://github.com/liberatov13/fintech-front-end.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Acesse o diretório do projeto
+cd fintech-front-end
 
-## Running end-to-end tests
+# Instale as dependencias
+npm clean-install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Execute o projeto com maven
+npm start
+```
 
-## Further help
+A aplicação ficará disponível através da URL http://localhost:4200 ou http://127.0.0.1:4200
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autor :pencil2:
+[Elvis Liberato de Barros](https://www.linkedin.com/in/elvisbarros/)
