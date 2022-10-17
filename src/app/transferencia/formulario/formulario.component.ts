@@ -36,7 +36,7 @@ export class FormularioComponent implements OnInit {
 		await Promise.all([
 			this.contaService.buscarPorNumero(transferenciaForm.value.contaDestino).toPromise(),
 			this.transferenciaService.buscarTaxa(this.transferencia).toPromise(),
-			this.contaService.buscarPorNumero('123456').toPromise()
+			this.contaService.buscarPorNumero('789123').toPromise()
 		]).then(responses => {
 			this.transferencia.contaDestino = responses[0]
 			this.transferencia.taxa = responses[1]

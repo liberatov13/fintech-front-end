@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor(private contaService: ContaService) { }
 
   ngOnInit(): void {
-		this.contaService.buscarPorNumero('123456').subscribe((response) => {
+		this.contaService.buscarPorNumero('789123').subscribe((response) => {
 			this.conta = response
 		})
   }
