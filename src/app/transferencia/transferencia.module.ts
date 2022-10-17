@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 
 import { ListaComponent } from './lista/lista.component';
@@ -32,7 +33,8 @@ import { TransferenciaService } from './transferencia.service';
 		BrowserAnimationsModule,
 		InputMaskModule,
 		DialogModule,
-		TableModule
+		TableModule,
+		InputNumberModule
 	],
 	providers: [TransferenciaService],
 	exports: [

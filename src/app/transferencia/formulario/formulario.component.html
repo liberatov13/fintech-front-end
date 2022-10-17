@@ -25,10 +25,11 @@
 		</div>
 	</div>
 
-	<div class="p-input-icon-left block mb-4">
-		<i class="pi pi-money-bill"></i>
-		<input [ngModel]="this.transferencia?.valor" id="valor-transferencia" name="valor" type="text" pInputText
-			placeholder="Valor da transferência" required="true" #valor="ngModel">
+	<div class="p-inputnumber-icon	 block mb-4">
+		<p-inputNumber [ngModel]="this.transferencia?.valor" name="valor" locale="pt-BR" currency="BRL"
+			placeholder="R$ Valor da transferência" [required]="true" #valor="ngModel" mode="currency" [minFractionDigits]="2" [maxFractionDigits]="2">
+		</p-inputNumber>
+
 		<small *ngIf="valor.invalid && valor.touched" class="p-error block">
 			Informe o valor
 		</small>
