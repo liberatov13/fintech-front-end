@@ -1,13 +1,16 @@
 <div class="mb-4">
 	<p-toolbar>
 		<div class="p-toolbar-group-left">
-			<button pButton label="Transferir" icon="pi pi-upload" class="mr-2" pTooltip="Nova Transferêcia" tooltipPosition="bottom">
+			<button pButton label="Transferir" icon="pi pi-upload" class="mr-2" pTooltip="Nova Transferêcia"
+				tooltipPosition="bottom" routerLink="transferencias/novo">
 			</button>
 		</div>
 
 		<div class="p-toolbar-group-right">
+			<p-chip class="mr-3" icon="pi pi-money-bill" label="{{ conta?.saldo | currency: 'BRL'}}"></p-chip>
+
 			<button pButton class="p-button-secondary" type="button" label="Transferências" icon="pi pi-list" badge="8"
-				pTooltip="Lista de transferências" tooltipPosition="bottom">
+				pTooltip="Lista de transferências" tooltipPosition="bottom" routerLink="transferencias">
 			</button>
 		</div>
 	</p-toolbar>

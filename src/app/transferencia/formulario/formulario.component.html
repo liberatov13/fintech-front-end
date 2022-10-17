@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="align-self-center">
+
+	<div>
+		<div class="p-input-icon-left vertical-align-top mb-4">
+			<i class="pi pi-credit-card"></i>
+			<input [ngModel]="this.transferencia?.contaDestino?.numero" id="conta-destino" name="contaDestino"
+				id="conta-destinatario" type="text" pInputText placeholder="Conta do destinatário" required="true"
+				#contaDestino="ngModel" [minlength]="6">
+			<small *ngIf="contaDestino.invalid && contaDestino.touched" class="p-error block">
+				Informe uma conta válida
+			</small>
+			<small *ngIf="contaDestino.invalid && contaDestino.touched" class="p-error block">
+				A conta deve conter 6 caracteres
+			</small>
+		</div>
+
+		<div class="inline-block vertical-align-top ml-4">
+			<p-calendar [ngModel]="this.transferencia?.dataAgendada" [minDate]="dataMinimaAgendamento"
+				name="dataAgendamento" placeholder="Data da transferencia" [inputId]="'dataAgendamento'"
+				[readonlyInput]="true" [showIcon]="true" [required]="true" #dataAgendada="ngModel">
+			</p-calendar>
+			<small *ngIf="dataAgendada.invalid && dataAgendada.touched" class="p-error block">
+				Informe a data em que a transferência deve ser feita
+			</small>
+		</div>
+	</div>
+
+	<div class="p-input-icon-left block mb-4">
+		<i class="pi pi-money-bill"></i>
+		<input [ngModel]="this.transferencia?.valor" id="valor-transferencia" name="valor" type="text" pInputText
+			placeholder="Valor da transferência" required="true" #valor="ngModel">
+		<small *ngIf="valor.invalid && valor.touched" class="p-error block">
+			Informe o valor
+		</small>
+	</div>
+
+
+	<button pButton label="Enviar" class="p-button-success block" type="submit" [disabled]="form.invalid"></button>
+
+</form>

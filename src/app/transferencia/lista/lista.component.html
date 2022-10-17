@@ -1,0 +1,27 @@
+<p-table [value]="transferencias" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Conta destinatário</th>
+            <th>Nome destinatário</th>
+            <th>Data do agendamento</th>
+            <th>Data de envio</th>
+            <th>Valor</th>
+			<th>Taxa</th>
+			<th>Total</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-transferencia>
+		<tr *ngIf="transferencia.length == 0">
+			<td>Nenhuma transferência</td>
+		</tr>
+        <tr>
+            <td>{{ transferencia.contaDestino?.numero }}</td>
+            <td>{{ transferencia.contaDestino?.nomeTitular }}</td>
+            <td>{{ transferencia.dataAgendada | date:'dd/MM/yyyy' }}</td>
+            <td>{{ transferencia.dataTransferencia | date:'dd/MM/yyyy' }}</td>
+            <td>{{ transferencia.valor | currency:'BRL' }}</td>
+			<td>{{ transferencia.taxa | currency:'BRL' }}</td>
+			<td>{{ transferencia.valor + transferencia.taxa | currency:'BRL' }}</td>
+        </tr>
+    </ng-template>
+</p-table>

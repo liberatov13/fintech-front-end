@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContaService } from '../conta/conta.service';
+import { Conta } from '../core/model/conta';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+	conta?: Conta
+
+  constructor(private contaService: ContaService) { }
 
   ngOnInit(): void {
+		this.contaService.buscarPorNumero('123456').subscribe((response) => {
+			this.conta = response
+		})
   }
 
 }
