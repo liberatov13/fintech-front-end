@@ -39,7 +39,7 @@ export class FormularioComponent implements OnInit {
 			this.contaService.buscarPorNumero('789123').toPromise()
 		]).then(responses => {
 			this.transferencia.contaDestino = responses[0]
-			this.transferencia.taxa = responses[1]
+			this.transferencia.taxa = parseFloat(Number(responses[1]).toFixed(2))
 			this.transferencia.contaOrigem = responses[2]
 		})
 		this.abrirDialog(this.transferencia)
