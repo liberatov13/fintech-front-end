@@ -41,5 +41,18 @@ npm start
 
 A aplicação ficará disponível através da URL http://localhost:4200 ou http://127.0.0.1:4200
 
+### Observações
+- As seguintes contas são pré-cadastradas pela API, e podem ser utilizadas para testes:
+
+|		Nome		|		Número		|		Saldo		|
+|:---------:|:-----------:|:---------:|
+|Roberto		|123456				|20.000,00	|
+|Lucas			|000123				|150,00			|
+|João				|654321				|15000,00		|
+|Jose				|789123				|10.000,00	|
+
+- As informações das contas podem ser consultadas através do recurso `GET` http://localhost:8080/contas da API.
+- Foi utilizada uma conta padrão (Conta 789123) para o envio das transferências através do front.
+
 ## Autor :pencil2:
 [Elvis Liberato de Barros](https://www.linkedin.com/in/elvisbarros/)
